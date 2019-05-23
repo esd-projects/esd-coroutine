@@ -1,0 +1,35 @@
+{
+  "require": {
+    "ext-swoole": "^4.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ESD\\Coroutine\\": "src/",
+      "ESD\\Coroutine\\ExampleClass\\": "exampleClass/"
+    },
+    "files": [
+      "src/Common.php"
+    ]
+  },
+  
+  "authors": [
+    {
+      "name": "tmtbe",
+      "email": "896369042@qq.com",
+      "homepage": "https://github.com/tmtbe"
+    }
+  ],
+
+  "name": "esd/esd-coroutine",
+  "type": "library",
+  "keywords": ["server", "swoole"],
+  "description": "esd-coroutine",
+  "license": "MIT",
+
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.laravel-china.org"
+    }
+  }
+}
