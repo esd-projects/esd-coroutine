@@ -6,7 +6,7 @@
  * Time: 13:56
  */
 
-namespace Future\Coroutine\Channel;
+namespace ESD\Coroutine\Channel;
 
 /**
  * 通道的状态

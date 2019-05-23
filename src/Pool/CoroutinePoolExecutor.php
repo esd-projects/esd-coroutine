@@ -6,12 +6,12 @@
  * Time: 13:18
  */
 
-namespace Future\Coroutine\Pool;
+namespace ESD\Coroutine\Pool;
 
 
 use Exception;
-use Future\Coroutine\Channel\Channel;
-use Future\Coroutine\Co;
+use ESD\Coroutine\Channel\Channel;
+use ESD\Coroutine\Co;
 
 /**
  * 协程池
