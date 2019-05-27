@@ -1,6 +1,6 @@
 {
   "require": {
-    "esd/esd-core": "dev-master",
+    "esd/esd-core": "~0.1",
     "ext-swoole": "^4.3.0"
   },
   "autoload": {
