@@ -6,10 +6,11 @@
  * Time: 13:56
  */
 
-namespace ESD\Coroutine\Channel;
-
+namespace ESD\Coroutine\Beans;
 /**
  * 通道的状态
+ * Class ChannelStats
+ * @package ESD\Coroutine\Beans
  */
 class ChannelStats
 {
@@ -31,9 +32,9 @@ class ChannelStats
 
     public function __construct($data)
     {
-        $this->consumerNum = $data['consumer_num'] ?? 0;
-        $this->producerNum = $data['producer_num'] ?? 0;
-        $this->queueNum = $data['queue_num'] ?? 0;
+        $this->consumerNum = $data['consumer_num'];
+        $this->producerNum = $data['producer_num'];
+        $this->queueNum = $data['queue_num'];
     }
 
     /**
