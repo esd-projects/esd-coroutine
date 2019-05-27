@@ -5,11 +5,10 @@
   },
   "autoload": {
     "psr-4": {
-      "ESD\\Coroutine\\": "src/",
-      "ESD\\Coroutine\\ExampleClass\\": "exampleClass/"
+      "ESD\\": "src/"
     },
     "files": [
-      "src/Common.php"
+      "src/Coroutine/Common.php"
     ]
   },
 
