@@ -82,10 +82,11 @@ class EventCallImpl extends ChannelImpl implements EventCall
         goWithContext(function () use ($fuc) {
             while (true) {
                 $result = $this->pop();
+                $fuc($result);
                 if ($this->once) {
                     $this->eventDispatcher->remove($this->type, $this);
+                    break;
                 }
-                $fuc($result);
             }
         });
     }
