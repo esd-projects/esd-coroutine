@@ -91,6 +91,12 @@ class EventCallImpl extends ChannelImpl implements EventCall
         });
     }
 
+    public function wait(callable $fuc)
+    {
+        $result = $this->pop();
+        $fuc($result);
+    }
+
     public function destroy()
     {
         $this->close();
