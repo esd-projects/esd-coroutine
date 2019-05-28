@@ -61,11 +61,13 @@ class ChannelImpl implements Channel
      */
     public function popLoop(callable $callback)
     {
-        while (true) {
-            $result = $this->pop();
-            if ($result === false) break;
-            $callback($result);
-        }
+        goWithContext(function () use ($callback) {
+            while (true) {
+                $result = $this->pop();
+                if ($result === false) break;
+                $callback($result);
+            }
+        });
     }
 
     /**
