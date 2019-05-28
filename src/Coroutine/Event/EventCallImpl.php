@@ -7,6 +7,7 @@
  */
 
 namespace ESD\Coroutine\Event;
+
 use ESD\Core\Plugins\Event\EventCall;
 use ESD\Core\Plugins\Event\EventDispatcher;
 use ESD\Coroutine\Channel\ChannelImpl;
@@ -76,13 +77,17 @@ class EventCallImpl extends ChannelImpl implements EventCall
         return $this->eventDispatcher;
     }
 
-    public function call(callable $fuc, $timeout = 5)
+    public function call(callable $fuc)
     {
-        $result = $this->pop($timeout);
-        if ($this->once) {
-            $this->eventDispatcher->remove($this->type, $this);
-        }
-        $fuc($result);
+        goWithContext(function () use ($fuc) {
+            while (true) {
+                $result = $this->pop();
+                if ($this->once) {
+                    $this->eventDispatcher->remove($this->type, $this);
+                }
+                $fuc($result);
+            }
+        });
     }
 
     public function destroy()
