@@ -91,9 +91,9 @@ class EventCallImpl extends ChannelImpl implements EventCall
         });
     }
 
-    public function wait()
+    public function wait($timeout = 5)
     {
-        return $this->pop();
+        return $this->pop($timeout);
     }
 
     public function destroy()
