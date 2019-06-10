@@ -8,8 +8,7 @@
 
 namespace ESD\Coroutine\Pool;
 
-
-use ESD\Coroutine\ChannelImpl;
+use ESD\Coroutine\Channel\ChannelImpl;
 use ESD\Coroutine\Co;
 
 abstract class Runnable
