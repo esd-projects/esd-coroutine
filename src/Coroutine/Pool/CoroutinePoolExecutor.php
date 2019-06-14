@@ -16,7 +16,7 @@ use ESD\Coroutine\Co;
  * Class CoroutinePoolExecutor
  * @package ESD\Coroutine\Pool
  */
-class CoroutinePoolExecutor
+class CoroutinePoolExecutor implements Executor
 {
     /**
      * 通道
